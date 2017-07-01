@@ -1,0 +1,12 @@
+<form name="formAutoriz" id="formAutoriz" ng-hide="adminFlag">
+	<label > Логин: &nbsp </label><input type="text" ng-model="auroriz.login"  /><br/><br/>
+	<label > Пароль: &nbsp </label><input type="text" ng-model="auroriz.password"   /><br/><br/>
+	<input type="submit"  ng-click="aurorizFn(auroriz)" ng-disabled="formAutoriz.$invalid" value="Авторизироваться" /><br/>
+</form>
+	<br/><br/>
+	<div id="mainHref" ng-show="adminFlag">
+		 <a   href="#!/main" ><h2>Перейти на главную страницу с вожможностями администратора</h2></a>
+	</div>
+	 
+ 
+ 

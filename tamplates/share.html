@@ -1,0 +1,25 @@
+﻿<div id='shareCont'  >  
+	<div id="delShare"  ng-show="adminFlag" ng-click="delShare( )" >×</div>
+	<div id="shareName" > {{postShare.name}}</div>   <br/> <br/> 
+	 <div id="shareImgCont">
+		<img src="{{ postShare.img}}" alt="">
+	 </div>
+	 <br/> <br/>
+	<div id="shareDescribe"  ng-bind-html="postShare.describe" > </div>
+	   <br/> <br/>
+	<div id="shareDate">{{postShare.date}}</div>
+	
+	 <br/> <br/> 
+	<div id="adminShare" ng-if="adminFlag">
+		<input ng-click="previewImgShare()" type="file" id="adminShareFile" ><br/> <br/>
+		<input   type="text" id=" " ng-model="postShare.name" ><br/> <br/> 
+		
+		<!-- <textarea rows="10" cols="130" name="text" value="Описание акции"   ng-model-html="postShare.describe"  ></textarea>  --> 
+		<div    class="container app">
+			<text-angular  ng-model="postShare.describe">   </text-angular> 
+		</div> 
+			<br/> <br/>
+		<input   type="button" id=" " ng-click="saveShare(postShare)" ng-disabled="formMenu.$invalid" value="Сохранить">  
+	</div>
+	 <br/> <br/> 
+</div>

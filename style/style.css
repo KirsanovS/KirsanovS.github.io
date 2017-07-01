@@ -1,14 +1,178 @@
- @font-face{font-family:classic; src: url('/fonts/Inconsolata.otf');}
- body{font-family:classic; color:#236; margin:0; padding:0; font-size: 45px; }
-html,body {overflow-y:hidden}
+﻿ @font-face{font-family:bip; src: url('/fonts/bip_regular.ttf');}     
+ 
+ html { font-size: 100%; }	
+ body{font-family:bip;   margin:0; padding:0; background:#fff;}
+ a{ text-decoration:none !important; font-family:bip;}
+ ul{list-style-type: none;margin: 0;}
+ input,select,button{font-family:bip; color:#123; padding: 3px 10px;  }::-webkit-input-placeholder{color:#EFF6FD;} :-ms-input-placeholder {color:#EFF6FD;}
+ h1,h2,h3,h4,h5,h6{font-family:bip; margin: 0;   }  
+input[type=file]{display:inline-block; }
+#indexContainer{min-width:1080px; color: #1d4e5a}
+.headAndFooter{height:200px; position:relative; overflow: hidden; color:#292282;}
+	.headAndFooter img{position: absolute; position: absolute; width:100%; bottom: 0px;  }
+	    
+		#headerMenu{position:absolute; top: 0; margin: 0 100px;}
+			#headerMenu>ul{padding: 10px;  }
+			#headerMenu>li{padding: 5px;font-size: 24px;}
+				 
+				#li2{margin-left: 40px;}
+				#li3{margin-left: 80px;}
+				#li4{margin-left: 120px;}
+	
+	#headLogo{position: absolute;    top: 10px;    right: 100px;    width: 500px;}
+	#lozung{       position: absolute;    bottom: 0px;    right: 100px;    width: 500px;    font-size: 20px;    text-align: center;    padding: 10px;
+}
+	
+#preHeader{text-align: center; margin:20px;     color: #123;}
+	#preHeader img{width: 50%;}
 
-#containerBtn{width:450px;  height:400px; position:relative;  }
-.btn{width:100%; height:50px; background:#def; text-align:center; margin-top:10px; cursor:pointer; border:solid 4px #49a;color:#49a; transition:0.2s;}
-.btn:hover{color:#def; background:#49a;}
-#restart{ display:none;}
-#start{}
+ #mapContainer{  position:relative; overflow:hidden; transition:1s; text-align:center; }
+#map{font-size: 40px;  cursor:pointer;   padding-top: 25px;    color: #cc0330;}
+#phones{   position: absolute;    top: 20px;    width: 500px;    right: 0px;    color: #0058ff;    background: #82b504;    opacity: 0.8;}	
+	#phones>li{        padding: 10px;    font-size: 25px;}	
+	
+	
+.mainButtonsCont{position: relative;  display:flex;     margin: -50px 100px 0px 100px;}
+	.buttonCont{ position: relative;  flex:1; cursor:pointer; }
+		.corpus{ width: 100%;} 
+		.buttonBigRound{position: absolute; top: 15px;    bottom: 15px;    right: 15px;    left: 15px; border: solid 0px;border-radius: 250px;background: #378; }
+		.buttonSmallRound{background: #fff; position: absolute;top: 20px;  bottom: 20px;   right: 20px;   left: 20px; border:solid 0px;border-radius:200px; overflow:hidden }
+		.buttonSmallRound>img{position: absolute;/*  display: block;border: solid 0px;border-radius: 200px; */ }
+		 
+		.buttonText{font-size: 16px;  text-align:right; position: absolute;bottom: -45px; left: 0px; right: 0px; height: 40px;padding:0px 10px; } 
+		
+		.smalButton{  position: absolute; top: 45%; left: -8%; height: 17%;  width: 17%; border: solid 0px;  border-radius: 20px;transform: rotate(60deg); transition: 1.0s; transform-origin: 330% 20%;}
+		/*  .buttonCont:hover .smalButton{ transform: rotate(-60deg);} */
+		
+		
+		
 
-#palayer_1{display:none;}
-#palayer_2{display:none;}
-#back{display:none;}
-#menuOptions{width:100%; display:none; background:#def }
+		
+		
+		
+#middle{ width:910px; margin: 50px auto; position:relative;}
+#middle #contHowIsShow{text-align:center; margin-top:20px; }
+	#middle .howIsShow{cursor:pointer; padding:20px;}
+	
+#middle .items{    position: relative; width:250px; display:inline-block; margin:0 25px 45px 25px; overflow:hidden;}
+	#middle .contImg{width:100%;  overflow:hidden;}
+	#middle .contImg img{width:100%;}
+
+	#middle .contInfo{position: relative; color:#123; height:70px; padding-left:10px; margin-top:15px; border:solid #69b; border-width:0px 0px 0px 3px;}
+	#middle #itemsButton{border:solid #69b 5px; padding:5px 15px; border-radius: 40px; cursor:pointer; font-size:17px;margin-top: 10px;}
+	#middle .items a {color:#69b; text-decoration:none; font-size:17px;}
+		.contInfo a{position:absolute; bottom:0; font-size:20px; cursor:pointer;}
+		
+/* -----monitor */
+.monitor{width:850px; height:400px; display:inline-block;float:left;margin:-25px 25px 25px 25px; overflow:hidden; position:relative;}
+	#closeMonitor{position:absolute; right:0px; top:-40px; font-size:80px; cursor:pointer;height:60px;}
+#backgroundImg{position:absolute; right:50px;}
+#monitorMainContainer{ position:relative; width:100%; height:100%; background:#f1edea}
+	#monitorContImg{width:350px; height:350px; margin:20px; float:left;}
+	#monitorContImg img{width:100%;}
+	
+	#infoItem{    margin-top: 20px;    float: right;    top: 0;    right: 0;    width: 50%; }
+	#middleButton{ bottom: 30px;  position: absolute; border-radius: 40px; border:solid #69b 5px; margin-top:20px; padding:10px 25px; cursor:pointer;}
+		.monitor a{color:#69b; text-decoration:none; font-size:25px;  }
+
+		
+		
+/* -----onePage	*/
+#onePage{position:relative; width:910px; margin:50px auto;
+	background:url(../images/design/onePage.png)no-repeat; background-position:60% 100%;}
+	#onePageImg{ text-align:center}
+		#onePageImg img{max-width: 100%; }
+	#onePageInfo{ padding: 0px 100px; margin: 0px 100px;}
+
+	
+	#adminOnePage{text-align:center;}
+		#onePageItem{display:inline-block;}
+		#onePageItem{width: 200px; position:relative;}
+			#onePageItem>button{position:absolute; top: 10px; right: 0px;}
+			#onePageItem>img{width:100%; }
+
+ 	
+			
+			
+
+
+#adminMenu{position: relative; width: 100%;text-align: center;}
+#adminMenu label{padding:10px;}
+
+#adminMenu input{margin-top: 10px;}
+
+#adminOpenButtonsItems{    width: 400px;    padding: 20px;    font-size: 20px;}
+#adminOpenButtonsMenu{margin: 150px 0px 20px;    width: 400px;    padding: 20px;    font-size: 20px;}
+
+#modifyMenu{position:absolute;     bottom: -90px; right: 0;}
+#delMenu{position: absolute; top: -20px;right: 0;font-size: 40px; color: #1d4e5a; cursor:pointer;}
+#modifyCont{position: relative;width: 250px;height: 250px;}		
+
+#mainPreViewCont{width:100%; position:relative;    text-align: center;     padding: 50px 0px 50px 0px;}
+#preViewCont{height: 250px; width: 250px; text-align:center;  position: relative;     display: inline-block; }	
+	#preView{width:250px; display:inline-block; position:relative; }		
+		#preView img{width:100%; }
+			 
+			 
+			#preViewImg2 img{position:absolute;}
+		#preViewButtonSmallRound{position: absolute; left: 10px; top: 10px; width: 250px; height: 250px;  background: #fff; border: solid 0px; border-radius: 150px;overflow: hidden;}
+			#preViewButtonSmallRound img{ width: 150%;}
+		
+		#preViewButtonBigRound{position: absolute;width: 270px;height: 270px; border: solid 0px;border-radius: 150px;background: #378;}
+		#preViewButtonText{position: absolute;bottom: -50px;right: 0; font-size: 30px;}
+	
+	
+	
+	
+#adminItem{width:100%; text-align: center;}	#adminItem input{display:inline-block}
+#ContViewAdminItem{width:100%; text-align: center;}
+	#viewAdminItem{width:350px; display: inline-block;}
+	#viewAdminItem img{width:100%;}
+	
+	#modifyItem{    position: absolute;    top: 0px;    left: 0px;}
+	#delItem{position: absolute; top: -20px;right: 0;font-size: 40px; color: #1d4e5a; cursor:pointer;}
+
+
+ #shareCont{position:relative; color:#112e35; margin: 0px 100px; 	}
+	#delShare{    position: absolute;  cursor:pointer;  top: 0;    right: 0px;    font-size: 55px;}
+	#shareName{    font-size: 25px;text-align:center}
+	#shareImgCont{text-align:center;     text-align: center;    max-width: 900px;    margin: 0 auto;}
+		#shareImgCont img{    max-width: 100%;	}
+	#shareDescribe{padding: 0px 100px}
+	#shareDate{text-align:right; padding: 0px 100px;}
+	
+#adminShare{text-align:center;}
+ 
+	
+	
+	
+/*---- admi Page ----*/
+
+#formAutoriz{text-align:center;}  
+#mainHref{text-align:center;}
+#mainHref a {color: #1d4e5a;    color: #1d4e5a;    display: inline-block;    border: 3px solid;    border-radius: 20px;padding: 20px;}
+
+
+
+
+/*--------advantageCont----*/
+	
+#advantageCont{margin: 50px 100px; font-size: 16px;}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			 

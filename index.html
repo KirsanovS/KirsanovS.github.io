@@ -1,37 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="regApp" >
 <head>
 	<meta charset="UTF-8">
-	 <link rel="stylesheet" href="style/style.css">
-	   
 	<title>Document</title>
+	<script src="libs/jquery.js"></script> 
+ 
+ 
+	<!-- for scroll -->
+	<link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.css">
+	<script src="libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="libs/scroll/setScroll.js"></script>		
+	<style> html, body{ height: 100%; } </style> 
+	
+	 <!-- carusel -->
+	  
+    <link rel="stylesheet" type="text/css" href="libs/carusel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="libs/carusel/slick/slick-theme.css"> 
+    <link rel="stylesheet" type="text/css" href="libs/carusel/slick/settings/options.css"> 
+	
+	
 </head>
-<body>
-	<canvas id="convas" width=480 height=480 style="background:#eef;">
-		
-	</canvas>
-	<div id='containerBtn'>
-		<div class="btn" id='start'>Start</div>
-		<div class="btn" id='two'>2 players</div>
-		<div class="btn" id='options'>Options</div>
-		<div class="btn" id='palayer_1'>Palayer 1</div>
-		<div class="btn" id='palayer_2'>Palayer 2</div>
-		<div class="btn" id='back'>Back</div>
-		<div class="btn" id='restart'>Restart</div>	 	
-		<div id="menuOptions" >
-			<canvas id="showPac" width=300  height=100 style="background:#eef;"> </canvas>
-			<div><input type="color" id="feelColor"><label> feel color</label></div>
-			<div><input type="color" id="strokeColor"><label> stroke color</label></div>
-			<div><input type="color" id="eyesFeelColor"><label> feel eyes</label></div>
-			<div><input type="color" id="eyesStrokeColor"><label> stroke eyes</label></div>
-			<div><input type="number" id="eyesRadius"><label> radius eyes</label></div>
-			<div class="btn" id='save'>save options</div>
-		</div>
-	</div>
-		<script src="javaScript/class.js"></script>
-		<script src="javaScript/main.js"></script>		
-		<script src="javaScript/menu.js"></script>		
-		<script src="animate/animateFn.js"></script>
-</body>
 
+<body ng-controller="main"  >
+<div id="indexContainer"   > 
+	<div class="headAndFooter" >
+		<img src="imgs\design\header.jpg" alt="">
+		<ul id="headerMenu"  >  
+			<li id="li1" ><a href="#!/main" style="color:#e1ff44">Главная</a></li>
+			<li id="li2" ><a href="#!/advantage" style="color:#4ff" >Преимущества</a></li>
+			<li id="li3" ><a href="#!/share" style="color:#f6f">Акции</a></li>	
+			<li id="li4" ><a style="color:#f61; cursor:pointer; " id="contacts">Контакты</a></li>	
+		</ul>
+		<img id="headLogo" src="imgs\design\logo.svg" alt=""> 
+		<div id="lozung">Экологически чистая мебель - залог здоровья вашего ребенка</div>
+	</div>  
+	<div id="preHeader"> 
+		<img src="imgs\design\preHeader.png" alt="">
+	</div>
+	 
+	<div ng-view ></div> 
+		<br/><br/> 
+		<div id="mapContainer" ng-show="flagMap" >
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.170606536261!2d29.200106934872903!3d53.15517935903381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d731726e88555b%3A0x80823eefee13fa07!2z0YPQuy4g0KfQtdGA0L3Rj9GF0L7QstGB0LrQvtCz0L4sINCR0L7QsdGA0YPQudGB0Lo!5e0!3m2!1sru!2sby!4v1498746341058" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	<div id="preHeader"> 
+		<img src="imgs\design\preFooter.png" alt=""><br/><br/>
+		<span>Адрес: г. Бобруйск, ул. Черногорского 44А</span>
+		<div id="map" ng-click="flagMap=1" >Карта</div> 
+	</div>	
+		<br/><br/>
+	<div class="headAndFooter" >
+		<img src="imgs\design\footer.png" alt=""> 
+		 
+			<ul id="phones">
+				<li>Тел: +375(225)71-57-70</li>
+				<li>Velcom: +375(29)677-82-28</li>
+				<li>MTS: +375(33)375-38-38</li>
+			</ul>
+		 
+	</div> 
+</div>  	
+</body>
+			 
+ 
+	<script src="angular/angular.js"></script>
+	<script src="angular/angular-route.js"></script>
+	<script src="angular/angular-animate.js"></script> 
+	 <script src="javaScript/main.js"></script>	
+	<script src="javaScript/route.js"></script>
+	<script src="javaScript/services/cervicesItems.js"></script>
+	<script src="javaScript/services/cervicesMenu.js"></script>
+	<script src="javaScript/services/cervicesShare.js"></script> 
+
+	<!-- wysiwygeditor -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel='stylesheet' href='libs/wysiwygeditor/font-awesome.css'>
+	<link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">
+	<style> 	textarea.ta-bind {	width: 100%;} .container {text-align:auto; text-align: -webkit-auto; }	</style> 
+ 
+		<script src='libs/wysiwygeditor/dist/textAngular-rangy.min.js'></script>  
+		<script src='libs/wysiwygeditor/dist/textAngular-sanitize.min.js'></script>   
+		<script src='libs/wysiwygeditor/dist/textAngular.min.js'></script>  
+		 
+	<!--  <div    class="container app">
+		 <text-angular  ng-model="htmlcontenttwo">   </text-angular>
+		<div ta-bind="text" ng-model="htmlcontenttwo" ta-readonly='disabled'></div>
+	</div> -->
+	
+	
+	 
+	<link rel="stylesheet" href="style/style.css">
+ 
+	 
+	
 </html>
+
+
+	
+	
+	 
+	 
+		
+		
+	
+	
+
+ 
+
+		
+	 
