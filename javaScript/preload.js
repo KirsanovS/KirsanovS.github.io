@@ -3,7 +3,7 @@ $('html').append('<div id="preload"><br/><br/><img style="width:50%;" src="imgs/
 preload.css(
 {'background':'rgb(236, 240, 241)', 
 'overflow': 'hidden',
- 'text-align': 'center', 'position': 'absolute',   
+ 'text-align': 'center', 'position': 'fixed',   
  'top': '0px',	'left': '0px',    'bottom': '0px',    'right': '0px',  
  'z-index': '10', })
  

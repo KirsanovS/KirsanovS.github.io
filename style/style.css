@@ -50,7 +50,7 @@ input[type=file]{display:inline-block; }
 		
 		
 		
-#middle{ width:910px; margin: 50px auto; position:relative;}
+#middle{ width:910px; margin: 0px auto; position:relative;}
 #middle #contHowIsShow{text-align:center; margin-top:20px; }
 	#middle .howIsShow{cursor:pointer; padding:20px;}
 	
