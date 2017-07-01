@@ -14,7 +14,7 @@ preload.css(
  
  
 
-/*  $( document ).ready(function(){
+/* $( document ).ready(function(){
 	 $("#preload").remove() 
 	 console.log('load')
- }) */  
+ }) */

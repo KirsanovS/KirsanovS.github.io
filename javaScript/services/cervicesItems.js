@@ -397,6 +397,7 @@ regApp.factory('serviceItems', function(){
 			name: objItem.name,
 			//imgs: objItem.imgs,
 			img:objItem.img,
+			imgs:[],
 			describe:objItem.describe,
 			fullDescribe:objItem.fullDescribe ,
 		 } 
