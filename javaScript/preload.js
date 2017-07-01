@@ -11,3 +11,10 @@ preload.css(
 	 $("#preload").remove() 
 	 console.log('load')
  })
+ 
+ 
+
+/* $( document ).ready(function(){
+	 $("#preload").remove() 
+	 console.log('load')
+ }) */
