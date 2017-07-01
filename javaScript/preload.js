@@ -7,14 +7,14 @@ preload.css(
  'top': '0px',	'left': '0px',    'bottom': '0px',    'right': '0px',  
  'z-index': '10', })
  
- $(window).load(function(){
-	 $("#preload").remove() 
-	 console.log('load')
- })
- 
- 
-
-/* $( document ).ready(function(){
+/*  $(window).load(function(){
 	 $("#preload").remove() 
 	 console.log('load')
  }) */
+ 
+ 
+
+ $( document ).ready(function(){
+	 $("#preload").remove() 
+	 console.log('load')
+ })  
