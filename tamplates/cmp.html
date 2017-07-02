@@ -1,7 +1,6 @@
 ﻿<div id="middle"  ng-init="paternView(3)" > 
 
 		 <div class="items"   ng-repeat="item in cmpArr" >
-			<div id="cmp" ng-click="cmpFn(item)" >Сравнить</div>
 			<div class="contImg">
 				<img ng-src="{{item.img}}" alt="" ng-click=" onePageFn(item)"/> 
 			</div>
@@ -9,9 +8,6 @@
 				<span ng-bind="item.name"></span> <br>  
 			</div>
 			<a ng-href="#!/moreInfo/{{item.id}}" ng-click="onePageFn(item)"><div id="itemsButton">Подробная информация</div></a> 
-			<!-- ----admin ------->
-				 
-			<input  id="modifyItem" ng-show="adminFlag" ng-click="modifyItem(item); previewImgItem(); " type="button" value="Изменить">
-			<div id="delItem"  ng-show="adminFlag" ng-click="delItem(item)" >×</div>
+
 		 </div>	 
 	 </div>
