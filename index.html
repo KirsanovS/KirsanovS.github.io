@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en" ng-app="regApp" >
 <head>
-	<meta name="robots" content="noindex">
-	<meta name="googlebot" content="noindex">
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="libs/jquery.js"></script> 
@@ -25,7 +23,9 @@
 </head>
 
 <body ng-controller="main"  >
+ 
 <div id="indexContainer"   > 
+	<a ng-href="#!/cmp" ng-show="cmpArr" ><div id="cmpBtn"   >  Сравнить выбранные товары  </div></a>
 	<div class="headAndFooter" >
 		<img src="imgs\design\header.jpg" alt="">
 		<ul id="headerMenu"  >  

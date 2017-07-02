@@ -25,6 +25,11 @@ regApp.config(function($routeProvider){
 		templateUrl: "tamplates/admin.html",
 		controller:'main'
 	});
+	$routeProvider.when("/cmp", 
+	{
+		templateUrl: "tamplates/cmp.html",
+		controller:'main'
+	});
 	$routeProvider.otherwise( 
 	{
 		redirectTo: '/main'

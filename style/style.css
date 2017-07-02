@@ -76,7 +76,8 @@ input[type=file]{display:inline-block; }
 	#middleButton{ bottom: 30px;  position: absolute; border-radius: 40px; border:solid #69b 5px; margin-top:20px; padding:10px 25px; cursor:pointer;}
 		.monitor a{color:#69b; text-decoration:none; font-size:25px;  }
 
-		
+	#cmp{cursor:pointer; }
+	#cmpBtn{position: fixed; top: 0; right: 0px; z-index:10; cursor:pointer; padding: 15px 10px; margin: 5px; font-size: 15px; border: solid 5px; border-radius: 8px; background: #fff;}
 		
 /* -----onePage	*/
 #onePage{position:relative; width:910px; margin:50px auto;

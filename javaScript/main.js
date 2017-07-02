@@ -7,6 +7,11 @@ var regApp = angular.module('regApp', ["ngRoute","ngAnimate" ,'textAngular']);
  regApp.controller('main', function ($scope,$location,$rootScope, $routeParams, $templateCache,
  servicesShare ,serviceItems,serviceMenu, $http,$timeout,textAngularManager){
  
+	 //--cmp
+	 $scope.cmpFn = function(item){
+		if( !$scope.cmpArr){ $rootScope.cmpArr = [] }
+		  $rootScope.cmpArr.push(item)  
+	 }
 	 
 	 $scope.aurorizFn = function(auroriz){
 		if(auroriz.login == 1 && auroriz.password == 1){
@@ -136,7 +141,7 @@ var regApp = angular.module('regApp', ["ngRoute","ngAnimate" ,'textAngular']);
 	 
 		ind = smalRecursion(ind+1); console.log('createMonitor:',ind )
 		$scope.hideEl = angular.element(items[ind-1]).after($scope.monitor);	
-		console.log('howIsShow',$scope.howIsShow)
+		console.log('createMonitor ind',ind)
 		 
 		 
 		function smalRecursion(indElement){	 
