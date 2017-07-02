@@ -58,7 +58,8 @@ input[type=file]{display:inline-block; }
 	#middle .contImg{width:100%;  overflow:hidden;}
 	#middle .contImg img{width:100%;}
 
-	#middle .contInfo{position: relative; color:#123; height:70px; padding-left:10px; margin-top:15px; border:solid #69b; border-width:0px 0px 0px 3px;}
+	#middle .contInfo{position: relative; color:#123; height:70px; padding-left:10px; margin-top:15px; border:solid #69b; border-width:0px 0px 0px 3px;     display: table-cell;
+    vertical-align: middle;}
 	#middle #itemsButton{border:solid #69b 5px; padding:5px 15px; border-radius: 40px; cursor:pointer; font-size:17px;margin-top: 10px;}
 	#middle .items a {color:#69b; text-decoration:none; font-size:17px;}
 		.contInfo a{position:absolute; bottom:0; font-size:20px; cursor:pointer;}
