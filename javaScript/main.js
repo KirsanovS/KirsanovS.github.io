@@ -68,10 +68,18 @@ var regApp = angular.module('regApp', ["ngRoute","ngAnimate" ,'textAngular']);
 	 
 	$scope.objItem ={ img:'/imgs/design/no-image.png'  }
 	
-	$scope.getItems = function(collName){
+	$scope.getItems = function(menu){
+		if(menu){
+			var collName = menu.collName
+			$scope.mainColor = menu.roundColor
+			console.log('$scope.mainColor',$scope.mainColor)
+		}else{$scope.mainColor = "#00ff80"}
+		
 		$scope.nowCollection = collName||'RSTUV7X';
 		var itemsUnPath = serviceItems.getColl($scope.nowCollection);
 		$scope.items = addPath(itemsUnPath,'/imgs/items/') 
+		  
+		 
 	} ;
 	$scope.getItems()
 	 
