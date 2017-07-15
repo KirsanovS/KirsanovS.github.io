@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="libs/jquery.js"></script> 
-	<script src="javaScript/preload.js"></script> 
- 
+<!-- 	<script src="javaScript/preload.js"></script>  -->
+	
  
 	<!-- for scroll -->
-	<link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.css">
+<!-- 	<link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.css">
 	<script src="libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="libs/scroll/setScroll.js"></script>		
-	<style> html, body{ height: 100%; } </style> 
+	<style> html, body{ height: 100%; } </style>  -->
 	
-	 <!-- carusel -->
+<!-- 	 carusel -->
 	  
     <link rel="stylesheet" type="text/css" href="libs/carusel/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="libs/carusel/slick/slick-theme.css"> 
@@ -23,20 +23,46 @@
 </head>
 
 <body ng-controller="main"  >
- 
-<div id="indexContainer"   > 
+  <!-- id="indexContainer"  -->
+<div ng-init="adminFlag=1" class="container-fluid" > 
 	<a ng-href="#!/cmp" ng-show="cmpArr" ><div id="cmpBtn"   >  Сравнить выбранные товары  </div></a>
-	<div class="headAndFooter" >
-		<img src="imgs\design\header.jpg" alt="">
-		<ul id="headerMenu"  >  
-			<li id="li1" ><a href="#!/main" style="color:#e1ff44">Главная</a></li>
-			<li id="li2" ><a href="#!/advantage" style="color:#4ff" >Преимущества</a></li>
-			<li id="li3" ><a href="#!/share" style="color:#f6f">Акции</a></li>	
-			<li id="li4" ><a style="color:#f61; cursor:pointer; " id="contacts">Контакты</a></li>	
-		</ul>
-		<img id="headLogo" src="imgs\design\logo.svg" alt=""> 
-		<div id="lozung">Экологически чистая мебель - залог здоровья вашего ребенка</div>
-	</div>   
+	
+ 
+	<!-- <div  class="headAndFooter"  >
+	
+		<div >
+			<img src="imgs\design\header.jpg" alt=""   >
+			<ul id="headerMenu"  >  
+				<li id="li1" ><a href="#!/main" style="color:#e1ff44">Главная</a></li>
+				<li id="li2" ><a href="#!/advantage" style="color:#4ff" >Преимущества</a></li>
+				<li id="li3" ><a href="#!/share" style="color:#f6f">Акции</a></li>	
+				<li id="li4" ><a style="color:#f61; cursor:pointer; " id="contacts">Контакты</a></li>	
+			</ul>
+		</div>
+		
+		<div  id="LogoCont"   > 
+			<img id="headLogo"   src="imgs\design\logo.svg" alt=""> 
+			<div id="lozung">Экологически чистая мебель - залог здоровья вашего ребенка</div>
+		</div>
+		 
+	</div> -->
+
+<div class="row indexRow"> 
+	<div class="col-sm-6">
+		<ul   >  
+				<li id="li1" ><a href="#!/main" style="color:#e1ff44"><h1>Главная</h1></a></li>
+				<li id="li2" ><a href="#!/advantage" style="color:#4ff" ><h1>Преимущества</a></li>
+				<li id="li3" ><a href="#!/share" style="color:#f6f"><h1>Акции</a></li>	
+				<li id="li4" ><a style="color:#f61; cursor:pointer; " id="contacts"><h1>Контакты</a></li>	
+			</ul>
+	</div>
+	<div class="col-sm-6" id="logoCont"> 
+			<img id="headLogo"   src="imgs\design\logo.svg" alt=""> <br> Экологически чистая мебель - залог здоровья вашего ребенка
+			 
+		</div>
+	<img src="imgs\design\header.jpg" id="imgHeader" alt="">
+</div>
+	
 	 <br/>
 	 <br/>
 	<div ng-view ></div> 
@@ -71,6 +97,7 @@
 	<script src="javaScript/services/cervicesItems.js"></script>
 	<script src="javaScript/services/cervicesMenu.js"></script>
 	<script src="javaScript/services/cervicesShare.js"></script> 
+	<script src="libs/sendForm.js"></script> 
 
 	<!-- wysiwygeditor -->
 	<link rel="stylesheet" href="libs/bootstrap.min.css">
