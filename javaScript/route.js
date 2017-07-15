@@ -1,11 +1,11 @@
 regApp.config(function($routeProvider){
-	$routeProvider.when('/main',
+	$routeProvider.when('/main/:collName',
 	{
 		templateUrl:'tamplates/main.html',
 		controller:'main'
 	});
 
-	$routeProvider.when("/moreInfo/:idDinamic", 
+	$routeProvider.when("/moreInfo/:collName/:idDinamic", 
 	{
 		templateUrl: "tamplates/onePage.html",
 		controller:'main'
@@ -32,6 +32,6 @@ regApp.config(function($routeProvider){
 	});
 	$routeProvider.otherwise( 
 	{
-		redirectTo: '/main'
+		redirectTo: '/main/jnYoqFcYxZ'
 	});
 }) ; 

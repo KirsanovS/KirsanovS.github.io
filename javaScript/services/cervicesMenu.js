@@ -1,4 +1,4 @@
-regApp.factory('serviceMenu', function( ){
+regApp.factory('serviceMenu', function( getData,$http,$q,$timeout  ){
    return{
 		items:[{
 			id:1,
@@ -62,44 +62,40 @@ regApp.factory('serviceMenu', function( ){
 			collName: 'RSTUVWX'
 		}],
 		
-		 
+		getMenu: function( ){ 
+			return $http.post('/getMenu',{},{transformRequest: angular.identity, headers:{'Content-Type':undefined} }) 
+		},
 		
-		addMenu: function(objMenu,collName){
-			 
-			 this.items[this.items.length] = {
-				id: this.items.length+1,
+		addMenu: function(objMenu,collName){ 
+			 var data = getData({ 
 				name: objMenu.name,
 				color: objMenu.color,
 				roundColor: objMenu.roundColor,
 				textColor: objMenu.textColor,
 				img:objMenu.img,
-				top: objMenu.top,
+				top: parseInt(objMenu.top),
 				left: objMenu.left,
 				size: objMenu.size,
 				collName: collName 
-			 } 
+			 }) 
 			 
-			 
-			/* var newObj = Object.create(objMenu)
-			newObj.id = this.items.length+1;
-			this.items[this.items.length] = newObj;
-			console.log('qqq',this.items.length,newObj) */
-	/* 			 
-				console.log('qqq',this.items.length,newObj)
-			this.items[this.items.length] = newObj  */
-			 
-			 
+			 $http.post('/addMenu',data,{transformRequest: angular.identity, headers:{'Content-Type':undefined} })
+			.then(function(response) { console.log('response',response)  }) 
+		 
 		},
 		
 		saveModify: function(modifyItem){ 
-			 this.items[modifyItem.id-1] = modifyItem 
+			 var data = getData(modifyItem) //console.log(modifyItem)
+			 
+			 $http.post('/saveModifyMenu',data,{transformRequest: angular.identity, headers:{'Content-Type':undefined} })
+			.then(function(response) {   })  
 		},
 		
-		del: function(menuItem){
-			for(var i=0; i< this.items.length; i++){
-				if(this.items[i].id == menuItem.id)
-					this.items.splice(i,1);
-			}
+		del: function(menuItem){	 /*  console.log('menuItem--',menuItem)   */
+			var data = getData(menuItem ); 
+			$http.post('/delMenu', data,{transformRequest: angular.identity, headers:{'Content-Type':undefined} })
+			.then(function(response) { console.log('	delllll'),   $timeout(function(){},0) }) 
+			 
 		}
 		
     };
